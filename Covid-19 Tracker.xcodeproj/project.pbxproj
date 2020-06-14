@@ -14,6 +14,11 @@
 		5DCB3F0F249697AC00FBD69A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DCB3F0E249697AC00FBD69A /* Preview Assets.xcassets */; };
 		5DCB3F12249697AC00FBD69A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DCB3F10249697AC00FBD69A /* LaunchScreen.storyboard */; };
 		5DCB3F1C249698CC00FBD69A /* SummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB3F1B249698CC00FBD69A /* SummaryViewModel.swift */; };
+		5DCB3F2024969AC200FBD69A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB3F1F24969AC200FBD69A /* NetworkManager.swift */; };
+		5DCB3F2324969AEC00FBD69A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB3F2224969AEC00FBD69A /* Constants.swift */; };
+		5DCB3F2624969BA100FBD69A /* CountryWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB3F2524969BA000FBD69A /* CountryWebService.swift */; };
+		5DCB3F2924969C1F00FBD69A /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB3F2824969C1F00FBD69A /* Country.swift */; };
+		5DCB3F2B24969D7900FBD69A /* CountriesSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB3F2A24969D7900FBD69A /* CountriesSummary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +29,13 @@
 		5DCB3F0B249697AC00FBD69A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DCB3F0E249697AC00FBD69A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5DCB3F11249697AC00FBD69A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5DCB3F13249697AC00FBD69A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Supporting/Info.plist; sourceTree = "<group>"; };
+		5DCB3F13249697AC00FBD69A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DCB3F1B249698CC00FBD69A /* SummaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewModel.swift; sourceTree = "<group>"; };
+		5DCB3F1F24969AC200FBD69A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5DCB3F2224969AEC00FBD69A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5DCB3F2524969BA000FBD69A /* CountryWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryWebService.swift; sourceTree = "<group>"; };
+		5DCB3F2824969C1F00FBD69A /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		5DCB3F2A24969D7900FBD69A /* CountriesSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesSummary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +68,16 @@
 		5DCB3F04249697A900FBD69A /* Covid-19 Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				5DCB3F2724969BAA00FBD69A /* Models */,
 				5DCB3F192496983D00FBD69A /* Views */,
+				5DCB3F2124969ADB00FBD69A /* Utils */,
+				5DCB3F2424969B5D00FBD69A /* Services */,
+				5DCB3F1E24969AA500FBD69A /* Managers */,
 				5DCB3F1D2496996500FBD69A /* Supporting */,
 				5DCB3F10249697AC00FBD69A /* LaunchScreen.storyboard */,
+				5DCB3F05249697A900FBD69A /* AppDelegate.swift */,
+				5DCB3F07249697A900FBD69A /* SceneDelegate.swift */,
+				5DCB3F0B249697AC00FBD69A /* Assets.xcassets */,
 				5DCB3F13249697AC00FBD69A /* Info.plist */,
 				5DCB3F0D249697AC00FBD69A /* Preview Content */,
 			);
@@ -95,11 +112,41 @@
 		5DCB3F1D2496996500FBD69A /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
-				5DCB3F05249697A900FBD69A /* AppDelegate.swift */,
-				5DCB3F07249697A900FBD69A /* SceneDelegate.swift */,
-				5DCB3F0B249697AC00FBD69A /* Assets.xcassets */,
 			);
 			path = Supporting;
+			sourceTree = "<group>";
+		};
+		5DCB3F1E24969AA500FBD69A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				5DCB3F1F24969AC200FBD69A /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		5DCB3F2124969ADB00FBD69A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5DCB3F2224969AEC00FBD69A /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5DCB3F2424969B5D00FBD69A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5DCB3F2524969BA000FBD69A /* CountryWebService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5DCB3F2724969BAA00FBD69A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5DCB3F2824969C1F00FBD69A /* Country.swift */,
+				5DCB3F2A24969D7900FBD69A /* CountriesSummary.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,9 +221,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DCB3F1C249698CC00FBD69A /* SummaryViewModel.swift in Sources */,
+				5DCB3F2624969BA100FBD69A /* CountryWebService.swift in Sources */,
 				5DCB3F06249697A900FBD69A /* AppDelegate.swift in Sources */,
+				5DCB3F2024969AC200FBD69A /* NetworkManager.swift in Sources */,
+				5DCB3F2B24969D7900FBD69A /* CountriesSummary.swift in Sources */,
+				5DCB3F2924969C1F00FBD69A /* Country.swift in Sources */,
 				5DCB3F08249697A900FBD69A /* SceneDelegate.swift in Sources */,
 				5DCB3F0A249697A900FBD69A /* SummaryView.swift in Sources */,
+				5DCB3F2324969AEC00FBD69A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

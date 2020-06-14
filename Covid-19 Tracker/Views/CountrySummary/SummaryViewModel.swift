@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+public class SummaryViewModel: ObservableObject {
+    
+    @Published var countriesSummary = CountriesSummary()
+    
+    init() {
+        fetchCountriesSummary()
+    }
+    
+    func fetchCountriesSummary () {
+        CountryWebService().getCountrySummary() { [weak self] summary, error in
+            guard let self = self else { return }
+            if let summary = summary {
+                self.countriesSummary = summary
+            }
+        }
+    }
+}

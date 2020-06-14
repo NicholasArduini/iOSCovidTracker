@@ -7,10 +7,16 @@
 //
 
 import SwiftUI
+import Combine
 
 struct SummaryView: View {
+    
+    @ObservedObject private var summaryViewModel = SummaryViewModel()
+    
     var body: some View {
-        Text("Hello, World!")
+        List(summaryViewModel.countriesSummary.countries, id: \.country) { country in
+            Text("\(country.country) - \(country.totalConfirmed)")
+        }
     }
 }
 
