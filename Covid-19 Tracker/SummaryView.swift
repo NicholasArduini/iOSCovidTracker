@@ -32,8 +32,8 @@ struct SummaryView: View {
                                     .transition(.scale)
                                     .frame(width: nil, height: self.isSearching ? nil : 0, alignment: .center)
                                     .padding(.leading)
-                                TextField(Constants.Strings.SEARCH_COUNTRIES, text: self.$searchText
-                                ).frame(width: nil, height: 40, alignment: .center)
+                                UITextFieldView(text: self.$searchText, placeholder: Constants.Strings.SEARCH_COUNTRIES, isFirstResponder: true)
+                                .frame(width: nil, height: 40, alignment: .center)
                             }
                             .background(Color.systemGray5)
                             .cornerRadius(20)
