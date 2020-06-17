@@ -20,6 +20,9 @@ struct Country : Codable {
     var newRecovered: Int = 0
     var totalRecovered: Int = 0
     private var dateString: String = ""
+    var totalActive: Int {
+        return totalConfirmed - totalRecovered
+    }
     
     enum CodingKeys: String, CodingKey {
         case country = "Country"
