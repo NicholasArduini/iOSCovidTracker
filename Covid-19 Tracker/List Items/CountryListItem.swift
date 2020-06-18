@@ -38,8 +38,8 @@ private struct CountryListItemStat: View {
     
     var body: some View {
         HStack {
-            Text("+\(newStat)").foregroundColor(.secondaryLabel).font(.caption).bold()
-            Text("\(totalStat)").font(.callout).bold()
+            Text(newStat.toPlusMinusString()).foregroundColor(.secondaryLabel).font(.caption).bold()
+            Text(totalStat.toPlusMinusString()).font(.callout).bold()
         }
     }
 }

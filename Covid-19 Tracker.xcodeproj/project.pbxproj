@@ -26,6 +26,7 @@
 		5DCB3F2624969BA100FBD69A /* CountryWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB3F2524969BA000FBD69A /* CountryWebService.swift */; };
 		5DCB3F2924969C1F00FBD69A /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB3F2824969C1F00FBD69A /* Country.swift */; };
 		5DCB3F2B24969D7900FBD69A /* CountriesSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB3F2A24969D7900FBD69A /* CountriesSummary.swift */; };
+		5DCC44D1249B055B0092F15C /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCC44D0249B055B0092F15C /* Int+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		5DCB3F2524969BA000FBD69A /* CountryWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryWebService.swift; sourceTree = "<group>"; };
 		5DCB3F2824969C1F00FBD69A /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		5DCB3F2A24969D7900FBD69A /* CountriesSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesSummary.swift; sourceTree = "<group>"; };
+		5DCC44D0249B055B0092F15C /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			children = (
 				5D3BE5902496AEBB008E70A6 /* Color+Extension.swift */,
 				5D3BE59A2499B2A9008E70A6 /* String+Extension.swift */,
+				5DCC44D0249B055B0092F15C /* Int+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				5DCB3F1C249698CC00FBD69A /* SummaryViewModel.swift in Sources */,
 				5DCB3F2624969BA100FBD69A /* CountryWebService.swift in Sources */,
 				5D3BE5A12499B757008E70A6 /* UITextFieldView.swift in Sources */,
+				5DCC44D1249B055B0092F15C /* Int+Extension.swift in Sources */,
 				5DCB3F06249697A900FBD69A /* AppDelegate.swift in Sources */,
 				5D3BE5962499AF4B008E70A6 /* LoadingView.swift in Sources */,
 				5DCB3F2024969AC200FBD69A /* NetworkManager.swift in Sources */,
