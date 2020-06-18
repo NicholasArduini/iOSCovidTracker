@@ -11,15 +11,35 @@ import SwiftUI
 struct CountryListItem: View {
     
     let country : Country
-        
+    let statType : StatTypeFilter
+    
     var body: some View {
         HStack {
             Text("\(country.countryCode.toFlagEmoji())")
             Text("\(country.country)")
             Spacer()
-            Text("+\(country.newConfirmed)").foregroundColor(.secondaryLabel).font(.caption).bold()
-            Text("\(country.totalConfirmed)").font(.callout).bold()
+            if (statType == StatTypeFilter.confirmed) {
+                CountryListItemStat(totalStat: country.totalConfirmed, newStat: country.newConfirmed)
+            } else if (statType == StatTypeFilter.active) {
+                CountryListItemStat(totalStat: country.totalActive, newStat: country.newActive)
+            } else if (statType == StatTypeFilter.recovered) {
+                CountryListItemStat(totalStat: country.totalRecovered, newStat: country.newRecovered)
+            } else if (statType == StatTypeFilter.deaths) {
+                CountryListItemStat(totalStat: country.totalDeaths, newStat: country.newDeaths)
+            }
         }
-        
+    }
+}
+
+private struct CountryListItemStat: View {
+    
+    let totalStat : Int
+    let newStat : Int
+    
+    var body: some View {
+        HStack {
+            Text("+\(newStat)").foregroundColor(.secondaryLabel).font(.caption).bold()
+            Text("\(totalStat)").font(.callout).bold()
+        }
     }
 }

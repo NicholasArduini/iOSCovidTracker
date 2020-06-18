@@ -25,8 +25,20 @@ struct CountriesSummary : Codable {
         return self.countries.filter { $0.country.lowercased().contains(countryName.lowercased()) }
     }
     
-    mutating func sort() {
+    mutating func sortTotalConfirmed() {
         self.countries = self.countries.sorted(by: { $0.totalConfirmed > $1.totalConfirmed })
+    }
+    
+    mutating func sortTotalActive() {
+        self.countries = self.countries.sorted(by: { $0.totalActive > $1.totalActive })
+    }
+    
+    mutating func sortTotalRecovered() {
+        self.countries = self.countries.sorted(by: { $0.totalRecovered > $1.totalRecovered })
+    }
+    
+    mutating func sortTotalDeaths() {
+        self.countries = self.countries.sorted(by: { $0.totalDeaths > $1.totalDeaths })
     }
 }
 

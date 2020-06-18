@@ -21,7 +21,10 @@ struct Country : Codable {
     var totalRecovered: Int = 0
     private var dateString: String = ""
     var totalActive: Int {
-        return totalConfirmed - totalRecovered
+        return totalConfirmed - totalRecovered - totalDeaths
+    }
+    var newActive: Int {
+        return newConfirmed - newRecovered - newDeaths
     }
     
     enum CodingKeys: String, CodingKey {

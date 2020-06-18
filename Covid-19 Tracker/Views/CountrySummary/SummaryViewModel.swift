@@ -8,13 +8,21 @@
 
 import Foundation
 
+enum StatTypeFilter {
+    case confirmed
+    case active
+    case recovered
+    case deaths
+}
+
 public class SummaryViewModel: ObservableObject {
     
     @Published var countriesSummary = CountriesSummary()
     @Published var isLoading = false
+    @Published var statType = StatTypeFilter.confirmed
     
     init() {
-        fetchCountriesSummary()
+        self.fetchCountriesSummary()
     }
     
     func fetchCountriesSummary () {
@@ -23,14 +31,22 @@ public class SummaryViewModel: ObservableObject {
             guard let self = self else { return }
             if let summary = summary {
                 self.countriesSummary = summary
-                self.countriesSummary.sort()
+                self.sortCountriesBasedOnFilter(statType: self.statType)
             }
             self.isLoading = false
         }
     }
     
-//    func searchCoutry (country: String) {
-//        print("searching \(country)")
-//        self.countriesSummary.countries = self.countriesSummary.countries.filter { $0.country.lowercased().contains(country.lowercased()) }
-//    }
+    func sortCountriesBasedOnFilter (statType: StatTypeFilter) {
+        switch statType {
+        case .confirmed:
+            self.countriesSummary.sortTotalConfirmed()
+        case .active:
+            self.countriesSummary.sortTotalActive()
+        case .recovered:
+            self.countriesSummary.sortTotalRecovered()
+        case .deaths:
+            self.countriesSummary.sortTotalDeaths()
+        }
+    }
 }

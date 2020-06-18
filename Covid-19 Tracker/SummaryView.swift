@@ -9,12 +9,14 @@
 import SwiftUI
 
 struct SummaryView: View {
+        
+    @State private var searchText = ""
+    @State private var isSearching = false
     
     @ObservedObject private var summaryViewModel = SummaryViewModel()
     
-    @State var searchText = ""
-    @State var statType = 0
-    @State var isSearching = false
+    init() {
+    }
     
     var body: some View {
         LoadingView(isShowing: .constant(summaryViewModel.isLoading)) {
@@ -58,18 +60,24 @@ struct SummaryView: View {
                     
                     if !self.isSearching {
                         StatsView(globalStats: self.summaryViewModel.countriesSummary.globalStats).transition(.scale)
-                        Picker(selection: self.$statType, label: Text("")) {
-                            Text(Constants.Strings.CONFIRMED).tag(0)
-                            Text(Constants.Strings.ACTIVE).tag(1)
-                            Text(Constants.Strings.RECOVERED).tag(2)
+                        Picker(selection: Binding<StatTypeFilter>(
+                        get: {self.summaryViewModel.statType},
+                        set: {self.summaryViewModel.statType = $0}), label: Text("")) {
+                            Text(Constants.Strings.CONFIRMED).tag(StatTypeFilter.confirmed)
+                            Text(Constants.Strings.ACTIVE).tag(StatTypeFilter.active)
+                            Text(Constants.Strings.RECOVERED).tag(StatTypeFilter.recovered)
+                            Text(Constants.Strings.DEATHS).tag(StatTypeFilter.deaths)
                         }
                         .pickerStyle(SegmentedPickerStyle())
                         .padding(.horizontal)
                         .transition(.scale)
+                        .onReceive(self.summaryViewModel.$statType) { type in
+                            self.summaryViewModel.sortCountriesBasedOnFilter(statType: type)
+                        }
                     }
                     
                     List(self.summaryViewModel.countriesSummary.filteredCountries(countryName: self.searchText), id: \.country) { country in
-                        CountryListItem(country: country)
+                        CountryListItem(country: country, statType: self.summaryViewModel.statType)
                     }
                     .background(Color.secondarySystemBackground)
                 }
