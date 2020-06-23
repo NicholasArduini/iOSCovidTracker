@@ -32,6 +32,7 @@ struct UITextFieldView: UIViewRepresentable {
         let textField = UITextField(frame: .zero)
         textField.delegate = context.coordinator
         textField.placeholder = placeholder
+        textField.clearButtonMode = .whileEditing
         return textField
     }
 
