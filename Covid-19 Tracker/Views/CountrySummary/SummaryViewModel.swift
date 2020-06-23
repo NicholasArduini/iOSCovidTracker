@@ -19,6 +19,7 @@ public class SummaryViewModel: ObservableObject {
     
     @Published var countriesSummary = CountriesSummary()
     @Published var isLoading = false
+    @Published var errorMessage = ""
     @Published var statType = StatTypeFilter.confirmed
     
     init() {
@@ -27,11 +28,14 @@ public class SummaryViewModel: ObservableObject {
     
     func fetchCountriesSummary () {
         self.isLoading = true
+        self.errorMessage = ""
         CountryWebService().getCountrySummary() { [weak self] summary, error in
             guard let self = self else { return }
             if let summary = summary {
                 self.countriesSummary = summary
                 self.sortCountriesBasedOnFilter(statType: self.statType)
+            } else if let error = error {
+                self.errorMessage = error
             }
             self.isLoading = false
         }

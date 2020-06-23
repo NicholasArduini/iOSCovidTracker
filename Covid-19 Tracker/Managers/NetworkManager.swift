@@ -22,7 +22,7 @@ class NetworkManager {
             var response : T?
             var errorMessage : String?
             
-            if let data = data {
+            if let data = data, !data.isEmpty {
                 do {
                     response = try JSONDecoder().decode(T.self, from: data)
                 } catch {

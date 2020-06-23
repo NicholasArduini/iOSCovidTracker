@@ -15,11 +15,13 @@ extension Int {
         
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
-        if self >= 0 {
+        if self > 0 {
             numberString = "+"
         }
         
-        numberString.append(numberFormatter.string(for: self) ?? "")
+        if self > 0 || self < 0 { numberString.append(numberFormatter.string(for: self) ?? "")
+        }
+        
         return numberString
     }
 }

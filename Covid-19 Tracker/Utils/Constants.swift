@@ -21,6 +21,7 @@ public struct Constants {
         public static let ACTIVE = "Active"
         public static let DEATHS = "Deaths"
         public static let SEARCH_COUNTRIES = "Search countries"
+        public static let TRY_AGAIN = "Try again"
     }
     
     public struct URLs {
