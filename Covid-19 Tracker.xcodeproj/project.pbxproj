@@ -75,15 +75,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		5D3BE5942499AF3D008E70A6 /* Widgets */ = {
+		5D3BE5942499AF3D008E70A6 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				5D3BE5972499B23F008E70A6 /* List Items */,
 				5D3BE5952499AF4B008E70A6 /* ContentLoadingView.swift */,
 				5D3BE59C2499B3A1008E70A6 /* StatsView.swift */,
 				5D3BE59E2499B4FF008E70A6 /* HeaderView.swift */,
 				5D3BE5A02499B757008E70A6 /* UITextFieldView.swift */,
 			);
-			path = Widgets;
+			path = "UI Components";
 			sourceTree = "<group>";
 		};
 		5D3BE5972499B23F008E70A6 /* List Items */ = {
@@ -113,8 +114,7 @@
 		5DCB3F04249697A900FBD69A /* Covid-19 Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				5D3BE5972499B23F008E70A6 /* List Items */,
-				5D3BE5942499AF3D008E70A6 /* Widgets */,
+				5D3BE5942499AF3D008E70A6 /* UI Components */,
 				5DCB3F2724969BAA00FBD69A /* Models */,
 				5DCB3F192496983D00FBD69A /* Views */,
 				5DCB3F2124969ADB00FBD69A /* Utils */,
