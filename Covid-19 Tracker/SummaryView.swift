@@ -24,7 +24,7 @@ struct SummaryView: View {
                     HStack {
                         if isSearching {
                             HStack {
-                                Image(systemName: Constants.Images.MAGNIFYING_GLASS)
+                                Image(systemName: Constants.Icons.MAGNIFYING_GLASS)
                                     .resizable()
                                     .frame(width: 20, height: 20)
                                     .foregroundColor(.tertiaryLabel)
@@ -40,10 +40,22 @@ struct SummaryView: View {
                             .transition(.scale)
                         }
                         if !isSearching {
-                            HeaderView(title: Constants.Strings.COVID_19)
+                            HeaderView(title: Constants.Strings.COVID_19_TITLE)
                         }
                         Spacer()
-                        Image(systemName: isSearching ? Constants.Images.CHEVRON_RIGHT_CIRCLE_FILL : Constants.Images.MAGNIFYING_GLASS_CIRCLE_FILL)
+                        if !isSearching {
+                            Image(systemName: Constants.Icons.ARROW_CLOCKWISE_CIRCLE_FILL)
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(.secondaryLabel)
+                                .padding(.trailing, 4)
+                            .onTapGesture{
+                                withAnimation {
+                                    self.summaryViewModel.fetchCountriesSummary()
+                                }
+                            }
+                        }
+                        Image(systemName: isSearching ? Constants.Icons.CHEVRON_RIGHT_CIRCLE_FILL : Constants.Icons.MAGNIFYING_GLASS_CIRCLE_FILL)
                             .resizable()
                             .frame(width: 30, height: 30)
                             .foregroundColor(.secondaryLabel)
@@ -78,7 +90,6 @@ struct SummaryView: View {
                     }
                     .background(Color.secondarySystemBackground)
                 }
-                .navigationBarTitle(Constants.Strings.COVID_19)
             }
             ContentLoadingView(isLoading: $summaryViewModel.isLoading, errorMessage: $summaryViewModel.errorMessage) {
                 self.summaryViewModel.fetchCountriesSummary()

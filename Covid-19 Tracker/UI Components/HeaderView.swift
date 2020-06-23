@@ -24,6 +24,6 @@ struct HeaderView: View {
 
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderView(title: Constants.Strings.COVID_19)
+        HeaderView(title: Constants.Strings.COVID_19_TITLE)
     }
 }

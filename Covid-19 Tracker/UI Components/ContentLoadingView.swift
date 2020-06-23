@@ -23,7 +23,7 @@ struct ContentLoadingView: View {
                         .frame(width: 50, height: 50)
                         .foregroundColor(.label)
                         .transition(.scale)
-                } else {
+                } else if (!errorMessage.isEmpty){
                     VStack {
                         Text(errorMessage)
                             .font(.body)

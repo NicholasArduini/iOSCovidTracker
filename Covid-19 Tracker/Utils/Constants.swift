@@ -15,7 +15,7 @@ public struct Constants {
         public static let INVALID_DATA_ERROR_MESSAGE = "We have encountered a data formatting issue"
         public static let UNEXPECTED_ERROR_MESSAGE = "We have encountered an unexpected error"
         
-        public static let COVID_19 = "Covid 19"
+        public static let COVID_19_TITLE = "🌎 Covid 19"
         public static let CONFIRMED = "Confirmed"
         public static let RECOVERED = "Recovered"
         public static let ACTIVE = "Active"
@@ -28,9 +28,10 @@ public struct Constants {
         public static let BASE_URL = "https://api.covid19api.com/"
     }
     
-    public struct Images {
+    public struct Icons {
         public static let MAGNIFYING_GLASS = "magnifyingglass"
         public static let MAGNIFYING_GLASS_CIRCLE_FILL = "magnifyingglass.circle.fill"
         public static let CHEVRON_RIGHT_CIRCLE_FILL = "chevron.right.circle.fill"
+        public static let ARROW_CLOCKWISE_CIRCLE_FILL = "arrow.clockwise.circle.fill"
     }
 }
