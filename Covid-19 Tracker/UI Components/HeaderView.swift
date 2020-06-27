@@ -16,9 +16,11 @@ struct HeaderView: View {
         Text(title)
             .font(.title)
             .fontWeight(.bold)
+            .minimumScaleFactor(0.5)
             .multilineTextAlignment(.leading)
-            .padding(.leading)
+            .padding(.horizontal)
             .transition(.scale)
+            .lineLimit(1)
     }
 }
 

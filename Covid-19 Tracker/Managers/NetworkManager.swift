@@ -27,7 +27,7 @@ class NetworkManager {
                     response = try JSONDecoder().decode(T.self, from: data)
                 } catch {
                     errorMessage = Constants.Strings.INVALID_DATA_ERROR_MESSAGE
-                    NSLog("JSON error: \(error.localizedDescription)")
+                    NSLog("JSON error: \(error)")
                 }
             } else if let error = error {
                 // erros such as invalid host name or no internet connection

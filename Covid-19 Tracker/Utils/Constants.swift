@@ -33,5 +33,6 @@ public struct Constants {
         public static let MAGNIFYING_GLASS_CIRCLE_FILL = "magnifyingglass.circle.fill"
         public static let CHEVRON_RIGHT_CIRCLE_FILL = "chevron.right.circle.fill"
         public static let ARROW_CLOCKWISE_CIRCLE_FILL = "arrow.clockwise.circle.fill"
+        public static let CHEVRON_LEFT = "chevron.left"
     }
 }

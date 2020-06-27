@@ -47,13 +47,13 @@ struct StatsView: View {
                 Spacer()
             }
             .frame(width: nil, height: 80, alignment: .center)
-            .background(Color.systemGray6)
+            .background(Color.systemBackground)
             .cornerRadius(12)
             .padding(.horizontal)
             .padding(.top)
         }
         .frame(width: nil, height: 200, alignment: .center)
-        .background(Color.systemGray5)
+        .background(Color.secondarySystemBackground)
         .cornerRadius(12)
         .padding(.horizontal)
     }

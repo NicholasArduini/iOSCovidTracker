@@ -8,35 +8,26 @@
 
 import Foundation
 
-struct Country : Codable {
+class Country : GlobalStats {
     
     var country: String = ""
     var countryCode: String = ""
     var slug: String = ""
-    var newConfirmed: Int = 0
-    var totalConfirmed: Int = 0
-    var newDeaths: Int = 0
-    var totalDeaths: Int = 0
-    var newRecovered: Int = 0
-    var totalRecovered: Int = 0
     private var dateString: String = ""
-    var totalActive: Int {
-        return totalConfirmed - totalRecovered - totalDeaths
-    }
-    var newActive: Int {
-        return newConfirmed - newRecovered - newDeaths
-    }
     
     enum CodingKeys: String, CodingKey {
         case country = "Country"
         case countryCode = "CountryCode"
         case slug = "Slug"
-        case newConfirmed = "NewConfirmed"
-        case totalConfirmed = "TotalConfirmed"
-        case newDeaths = "NewDeaths"
-        case totalDeaths = "TotalDeaths"
-        case newRecovered = "NewRecovered"
-        case totalRecovered = "TotalRecovered"
         case dateString = "Date"
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        country = try container.decode(String.self, forKey: .country)
+        countryCode = try container.decode(String.self, forKey: .countryCode)
+        slug = try container.decode(String.self, forKey: .slug)
+        dateString = try container.decode(String.self, forKey: .dateString)
+        try super.init(from: decoder)
     }
 }
