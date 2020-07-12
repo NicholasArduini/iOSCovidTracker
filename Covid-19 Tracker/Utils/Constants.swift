@@ -15,7 +15,7 @@ public struct Constants {
         public static let INVALID_DATA_ERROR_MESSAGE = "We have encountered a data formatting issue"
         public static let UNEXPECTED_ERROR_MESSAGE = "We have encountered an unexpected error"
         
-        public static let COVID_19_TITLE = "🌎 Covid 19"
+        public static let COVID_19_TITLE = "🌎 COVID 19"
         public static let CONFIRMED = "Confirmed"
         public static let RECOVERED = "Recovered"
         public static let ACTIVE = "Active"

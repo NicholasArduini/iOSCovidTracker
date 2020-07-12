@@ -70,12 +70,13 @@ struct SummaryView: View {
                         NavigationLink(destination: CountryDetailView(country: country)) {
                             CountryListItem(country: country, statType: self.summaryVM.statType)
                         }
-                    }
+                    }.listStyle(PlainListStyle())
                 }
             }
             .navigationBarHidden(true)
             .navigationBarTitle("")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

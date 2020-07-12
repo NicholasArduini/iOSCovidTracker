@@ -66,6 +66,20 @@ struct ContentLoadingView<Content: View>: View {
     }
 }
 
+private struct ActivityCircle: View {
+    
+    let index: Int
+    let geometry: GeometryProxy
+    @Binding var isAnimating: Bool
+    
+    var body: some View {
+        Circle()
+            .frame(width: geometry.size.width / 5, height: geometry.size.height / 5)
+            .scaleEffect(!self.isAnimating ? 1 - CGFloat(index) / 5 : 0.2 + CGFloat(index) / 5)
+            .offset(y: geometry.size.width / 10 - geometry.size.height / 2)
+    }
+}
+
 private struct ActivityIndicator: View {
     
     @State private var isAnimating: Bool = false
@@ -74,10 +88,7 @@ private struct ActivityIndicator: View {
         GeometryReader { (geometry: GeometryProxy) in
             ForEach(0..<5) { index in
                 Group {
-                    Circle()
-                        .frame(width: geometry.size.width / 5, height: geometry.size.height / 5)
-                        .scaleEffect(!self.isAnimating ? 1 - CGFloat(index) / 5 : 0.2 + CGFloat(index) / 5)
-                        .offset(y: geometry.size.width / 10 - geometry.size.height / 2)
+                    ActivityCircle(index: index, geometry: geometry, isAnimating: $isAnimating)
                 }.frame(width: geometry.size.width, height: geometry.size.height)
                     .rotationEffect(!self.isAnimating ? .degrees(0) : .degrees(360))
                     .animation(Animation
