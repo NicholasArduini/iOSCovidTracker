@@ -33,6 +33,7 @@
 		5DCB3F2924969C1F00FBD69A /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB3F2824969C1F00FBD69A /* Country.swift */; };
 		5DCB3F2B24969D7900FBD69A /* CountriesSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB3F2A24969D7900FBD69A /* CountriesSummary.swift */; };
 		5DCC44D1249B055B0092F15C /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCC44D0249B055B0092F15C /* Int+Extension.swift */; };
+		5DE66FF924BBD1C20093E083 /* StatsBarLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE66FF824BBD1C20093E083 /* StatsBarLineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		5DCB3F2824969C1F00FBD69A /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		5DCB3F2A24969D7900FBD69A /* CountriesSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesSummary.swift; sourceTree = "<group>"; };
 		5DCC44D0249B055B0092F15C /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		5DE66FF824BBD1C20093E083 /* StatsBarLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsBarLineView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				5D3BE5A02499B757008E70A6 /* UITextFieldView.swift */,
 				5DBB268C24A7E9240063CDBB /* IconButton.swift */,
 				5DBB269824BB95E20063CDBB /* StatTypePicker.swift */,
+				5DE66FF824BBD1C20093E083 /* StatsBarLineView.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				5DCB3F2924969C1F00FBD69A /* Country.swift in Sources */,
 				5DBB269724BB95B50063CDBB /* Binding+Extension.swift in Sources */,
 				5DCB3F08249697A900FBD69A /* SceneDelegate.swift in Sources */,
+				5DE66FF924BBD1C20093E083 /* StatsBarLineView.swift in Sources */,
 				5DCB3F0A249697A900FBD69A /* SummaryView.swift in Sources */,
 				5D3BE59F2499B4FF008E70A6 /* HeaderView.swift in Sources */,
 				5DCB3F2324969AEC00FBD69A /* Constants.swift in Sources */,

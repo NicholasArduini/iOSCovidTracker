@@ -88,7 +88,7 @@ private struct ActivityIndicator: View {
         GeometryReader { (geometry: GeometryProxy) in
             ForEach(0..<5) { index in
                 Group {
-                    ActivityCircle(index: index, geometry: geometry, isAnimating: $isAnimating)
+                    ActivityCircle(index: index, geometry: geometry, isAnimating: self.$isAnimating)
                 }.frame(width: geometry.size.width, height: geometry.size.height)
                     .rotationEffect(!self.isAnimating ? .degrees(0) : .degrees(360))
                     .animation(Animation

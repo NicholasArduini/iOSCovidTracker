@@ -37,14 +37,19 @@ struct StatsView: View {
                     Spacer()
                 }
             }
-            HStack(alignment: .center, spacing: 4) {
+            VStack {
                 Spacer()
-                SingleStat(title: Constants.Strings.ACTIVE, stat: globalStats.totalActive, change: globalStats.newActive, color: .systemOrange)
+                HStack(alignment: .center, spacing: 4) {
+                    Spacer()
+                    SingleStat(title: Constants.Strings.ACTIVE, stat: globalStats.totalActive, change: globalStats.newActive, color: .systemOrange)
+                    Spacer()
+                    SingleStat(title: Constants.Strings.RECOVERED, stat: globalStats.totalRecovered, change: globalStats.newRecovered, color: .systemGreen)
+                    Spacer()
+                    SingleStat(title: Constants.Strings.DEATHS, stat: globalStats.totalDeaths, change: globalStats.newDeaths, color: .systemRed)
+                    Spacer()
+                }
                 Spacer()
-                SingleStat(title: Constants.Strings.RECOVERED, stat: globalStats.totalRecovered, change: globalStats.newRecovered, color: .systemGreen)
-                Spacer()
-                SingleStat(title: Constants.Strings.DEATHS, stat: globalStats.totalDeaths, change: globalStats.newDeaths, color: .systemRed)
-                Spacer()
+                StatsBarLineView(globalStats: globalStats, height: 5)
             }
             .frame(width: nil, height: 80, alignment: .center)
             .background(Color.systemBackground)
