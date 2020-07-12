@@ -14,13 +14,12 @@ struct HeaderView: View {
     
     var body: some View {
         Text(title)
-            .font(.title)
-            .fontWeight(.bold)
-            .minimumScaleFactor(0.5)
+            .font(.system(size: 26, weight: .bold, design: .default))
             .multilineTextAlignment(.leading)
             .padding(.horizontal)
             .transition(.scale)
             .lineLimit(1)
+            .minimumScaleFactor(.leastNonzeroMagnitude)
     }
 }
 
