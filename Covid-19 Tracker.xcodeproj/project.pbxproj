@@ -18,6 +18,8 @@
 		5DBB269024A7E9A90063CDBB /* CountryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBB268F24A7E9A90063CDBB /* CountryDetailView.swift */; };
 		5DBB269324A7EDC80063CDBB /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 5DBB269224A7EDC80063CDBB /* SwiftUICharts */; };
 		5DBB269524AAB2710063CDBB /* CountryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBB269424AAB2710063CDBB /* CountryDetailViewModel.swift */; };
+		5DBB269724BB95B50063CDBB /* Binding+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBB269624BB95B50063CDBB /* Binding+Extension.swift */; };
+		5DBB269924BB95E20063CDBB /* StatTypePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBB269824BB95E20063CDBB /* StatTypePicker.swift */; };
 		5DCB3F06249697A900FBD69A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB3F05249697A900FBD69A /* AppDelegate.swift */; };
 		5DCB3F08249697A900FBD69A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB3F07249697A900FBD69A /* SceneDelegate.swift */; };
 		5DCB3F0A249697A900FBD69A /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB3F09249697A900FBD69A /* SummaryView.swift */; };
@@ -44,6 +46,8 @@
 		5DBB268C24A7E9240063CDBB /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
 		5DBB268F24A7E9A90063CDBB /* CountryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailView.swift; sourceTree = "<group>"; };
 		5DBB269424AAB2710063CDBB /* CountryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewModel.swift; sourceTree = "<group>"; };
+		5DBB269624BB95B50063CDBB /* Binding+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extension.swift"; sourceTree = "<group>"; };
+		5DBB269824BB95E20063CDBB /* StatTypePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatTypePicker.swift; sourceTree = "<group>"; };
 		5DCB3F02249697A900FBD69A /* Covid-19 Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid-19 Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DCB3F05249697A900FBD69A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DCB3F07249697A900FBD69A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 				5D3BE5902496AEBB008E70A6 /* Color+Extension.swift */,
 				5D3BE59A2499B2A9008E70A6 /* String+Extension.swift */,
 				5DCC44D0249B055B0092F15C /* Int+Extension.swift */,
+				5DBB269624BB95B50063CDBB /* Binding+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -92,6 +97,7 @@
 				5D3BE59E2499B4FF008E70A6 /* HeaderView.swift */,
 				5D3BE5A02499B757008E70A6 /* UITextFieldView.swift */,
 				5DBB268C24A7E9240063CDBB /* IconButton.swift */,
+				5DBB269824BB95E20063CDBB /* StatTypePicker.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -306,11 +312,13 @@
 				5DCB3F2B24969D7900FBD69A /* CountriesSummary.swift in Sources */,
 				5D3BE59B2499B2A9008E70A6 /* String+Extension.swift in Sources */,
 				5DCB3F2924969C1F00FBD69A /* Country.swift in Sources */,
+				5DBB269724BB95B50063CDBB /* Binding+Extension.swift in Sources */,
 				5DCB3F08249697A900FBD69A /* SceneDelegate.swift in Sources */,
 				5DCB3F0A249697A900FBD69A /* SummaryView.swift in Sources */,
 				5D3BE59F2499B4FF008E70A6 /* HeaderView.swift in Sources */,
 				5DCB3F2324969AEC00FBD69A /* Constants.swift in Sources */,
 				5D3BE5912496AEBB008E70A6 /* Color+Extension.swift in Sources */,
+				5DBB269924BB95E20063CDBB /* StatTypePicker.swift in Sources */,
 				5D3BE59D2499B3A1008E70A6 /* StatsView.swift in Sources */,
 				5D3BE5992499B26A008E70A6 /* CountryListItem.swift in Sources */,
 			);

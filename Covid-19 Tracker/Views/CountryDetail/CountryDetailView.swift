@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import SwiftUICharts
 
 struct CountryDetailView: View {
     
@@ -32,19 +33,11 @@ struct CountryDetailView: View {
                 
                 StatsView(globalStats: self.countryDetailVM.country).padding(.top)
                 
-                Picker(selection: Binding<StatTypeFilter>(
-                    get: { self.countryDetailVM.statType },
-                    set: { self.countryDetailVM.statType = $0 }), label: EmptyView()) {
-                        Text(Constants.Strings.CONFIRMED).tag(StatTypeFilter.confirmed)
-                        Text(Constants.Strings.ACTIVE).tag(StatTypeFilter.active)
-                        Text(Constants.Strings.RECOVERED).tag(StatTypeFilter.recovered)
-                        Text(Constants.Strings.DEATHS).tag(StatTypeFilter.deaths)
-                }
-                .pickerStyle(SegmentedPickerStyle())
-                .padding(.horizontal)
-                .onReceive(self.countryDetailVM.$statType) { type in
+                StatTypePicker(statType: self.$countryDetailVM.statType, onChange: { type in
                     self.countryDetailVM.buildLineGraphDataBasedOnFilter(statType: type)
-                }
+                })
+                .padding(.horizontal)
+                
                 ScrollView(.vertical) {
                     VStack {
                         VStack {

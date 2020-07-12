@@ -58,20 +58,12 @@ struct SummaryView: View {
                     
                     if !self.isSearching {
                         StatsView(globalStats: self.summaryVM.countriesSummary.globalStats).transition(.scale)
-                        Picker(selection: Binding<StatTypeFilter>(
-                            get: { self.summaryVM.statType },
-                            set: { self.summaryVM.statType = $0 }), label: EmptyView()) {
-                                Text(Constants.Strings.CONFIRMED).tag(StatTypeFilter.confirmed)
-                                Text(Constants.Strings.ACTIVE).tag(StatTypeFilter.active)
-                                Text(Constants.Strings.RECOVERED).tag(StatTypeFilter.recovered)
-                                Text(Constants.Strings.DEATHS).tag(StatTypeFilter.deaths)
-                        }
-                        .pickerStyle(SegmentedPickerStyle())
+                        
+                        StatTypePicker(statType: self.$summaryVM.statType, onChange: { type in
+                            self.summaryVM.sortCountriesBasedOnFilter(statType: type)
+                        })
                         .padding(.horizontal)
                         .transition(.scale)
-                        .onReceive(self.summaryVM.$statType) { type in
-                            self.summaryVM.sortCountriesBasedOnFilter(statType: type)
-                        }
                     }
                     
                     List(self.summaryVM.countriesSummary.filteredCountries(countryName: self.searchText), id: \.country) { country in
