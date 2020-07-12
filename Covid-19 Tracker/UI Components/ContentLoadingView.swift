@@ -8,14 +8,24 @@
 
 import SwiftUI
 
-struct ContentLoadingView: View {
+struct ContentLoadingView<Content: View>: View {
     
-    @Binding var isLoading: Bool
-    @Binding var errorMessage: String
+    @Binding private var isLoading: Bool
+    @Binding private var errorMessage: String
+    
+    let content: () -> Content
     var tryAgainClicked: () -> ()
+    
+    init(isLoading: Binding<Bool>, errorMessage: Binding<String>, tryAgainClicked: @escaping () -> (), @ViewBuilder content: @escaping () -> Content) {
+        self._isLoading = isLoading
+        self._errorMessage = errorMessage
+        self.tryAgainClicked = tryAgainClicked
+        self.content = content
+    }
     
     var body: some View {
         ZStack(alignment: .center) {
+            content()
             ZStack {
                 Rectangle().frame(width: nil, height: nil, alignment: .center).edgesIgnoringSafeArea(.all).foregroundColor(.secondarySystemBackground)
                 if (isLoading) {

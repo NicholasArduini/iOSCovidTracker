@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		5D3BE5A12499B757008E70A6 /* UITextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3BE5A02499B757008E70A6 /* UITextFieldView.swift */; };
 		5DBB268D24A7E9240063CDBB /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBB268C24A7E9240063CDBB /* IconButton.swift */; };
 		5DBB269024A7E9A90063CDBB /* CountryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBB268F24A7E9A90063CDBB /* CountryDetailView.swift */; };
+		5DBB269324A7EDC80063CDBB /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 5DBB269224A7EDC80063CDBB /* SwiftUICharts */; };
+		5DBB269524AAB2710063CDBB /* CountryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBB269424AAB2710063CDBB /* CountryDetailViewModel.swift */; };
 		5DCB3F06249697A900FBD69A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB3F05249697A900FBD69A /* AppDelegate.swift */; };
 		5DCB3F08249697A900FBD69A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB3F07249697A900FBD69A /* SceneDelegate.swift */; };
 		5DCB3F0A249697A900FBD69A /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB3F09249697A900FBD69A /* SummaryView.swift */; };
@@ -41,6 +43,7 @@
 		5D3BE5A02499B757008E70A6 /* UITextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldView.swift; sourceTree = "<group>"; };
 		5DBB268C24A7E9240063CDBB /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
 		5DBB268F24A7E9A90063CDBB /* CountryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailView.swift; sourceTree = "<group>"; };
+		5DBB269424AAB2710063CDBB /* CountryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewModel.swift; sourceTree = "<group>"; };
 		5DCB3F02249697A900FBD69A /* Covid-19 Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid-19 Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DCB3F05249697A900FBD69A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DCB3F07249697A900FBD69A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DBB269324A7EDC80063CDBB /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				5DBB268F24A7E9A90063CDBB /* CountryDetailView.swift */,
+				5DBB269424AAB2710063CDBB /* CountryDetailViewModel.swift */,
 			);
 			path = CountryDetail;
 			sourceTree = "<group>";
@@ -227,6 +232,9 @@
 			dependencies = (
 			);
 			name = "Covid-19 Tracker";
+			packageProductDependencies = (
+				5DBB269224A7EDC80063CDBB /* SwiftUICharts */,
+			);
 			productName = "Covid-19 Tracker";
 			productReference = 5DCB3F02249697A900FBD69A /* Covid-19 Tracker.app */;
 			productType = "com.apple.product-type.application";
@@ -255,6 +263,9 @@
 				Base,
 			);
 			mainGroup = 5DCB3EF9249697A900FBD69A;
+			packageReferences = (
+				5DBB269124A7EDC80063CDBB /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = 5DCB3F03249697A900FBD69A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -288,6 +299,7 @@
 				5DCB3F2624969BA100FBD69A /* CountryWebService.swift in Sources */,
 				5D3BE5A12499B757008E70A6 /* UITextFieldView.swift in Sources */,
 				5DCC44D1249B055B0092F15C /* Int+Extension.swift in Sources */,
+				5DBB269524AAB2710063CDBB /* CountryDetailViewModel.swift in Sources */,
 				5DCB3F06249697A900FBD69A /* AppDelegate.swift in Sources */,
 				5D3BE5962499AF4B008E70A6 /* ContentLoadingView.swift in Sources */,
 				5DCB3F2024969AC200FBD69A /* NetworkManager.swift in Sources */,
@@ -496,6 +508,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5DBB269124A7EDC80063CDBB /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5DBB269224A7EDC80063CDBB /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DBB269124A7EDC80063CDBB /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5DCB3EFA249697A900FBD69A /* Project object */;
 }

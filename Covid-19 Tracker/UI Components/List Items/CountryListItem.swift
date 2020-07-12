@@ -15,8 +15,8 @@ struct CountryListItem: View {
     
     var body: some View {
         HStack {
-            Text("\(country.countryCode.toFlagEmoji())")
-            Text("\(country.country)")
+            Text(country.countryCode.toFlagEmoji())
+            Text(country.country)
             Spacer()
             if (statType == StatTypeFilter.confirmed) {
                 CountryListItemStat(totalStat: country.totalConfirmed, newStat: country.newConfirmed)

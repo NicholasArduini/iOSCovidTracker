@@ -26,6 +26,8 @@ public struct Constants {
     
     public struct URLs {
         public static let BASE_URL = "https://api.covid19api.com/"
+        public static let SUMMARY = BASE_URL + "summary"
+        public static let TOTAL_DAY_ONE_COUNTRY = BASE_URL + "total/dayone/country/"
     }
     
     public struct Icons {

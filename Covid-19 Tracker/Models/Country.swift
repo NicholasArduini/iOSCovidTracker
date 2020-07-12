@@ -8,6 +8,28 @@
 
 import Foundation
 
+class CountryStat : Decodable {
+    
+    var country: String = ""
+    var countryCode: String = ""
+    var confirmed: Int = 0
+    var deaths: Int = 0
+    var recovered: Int = 0
+    var active: Int = 0
+    private var dateString: String = ""
+    
+    enum CodingKeys: String, CodingKey {
+        case country = "Country"
+        case countryCode = "CountryCode"
+        case confirmed = "Confirmed"
+        case deaths = "Deaths"
+        case recovered = "Recovered"
+        case active = "Active"
+        case dateString = "Date"
+    }
+}
+
+
 class Country : GlobalStats {
     
     var country: String = ""
@@ -20,6 +42,10 @@ class Country : GlobalStats {
         case countryCode = "CountryCode"
         case slug = "Slug"
         case dateString = "Date"
+    }
+    
+    func toString() -> String {
+        return "\(self.countryCode.toFlagEmoji()) \(self.country)"
     }
     
     required init(from decoder: Decoder) throws {
