@@ -11,11 +11,7 @@ import SwiftUICharts
 
 struct CountryDetailView: View {
     
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
     @ObservedObject private var countryDetailVM : CountryDetailViewModel
-    
-    @State var selection = StatTypeFilter.confirmed
     
     init(country: Country) {
         self.countryDetailVM = CountryDetailViewModel(country: country)
@@ -40,12 +36,9 @@ struct CountryDetailView: View {
                 
                 ScrollView(.vertical) {
                     VStack {
-                        VStack {
-                            LineView(data: self.countryDetailVM.filteredHistoricData).padding(.horizontal)
-                            Spacer()
-                        }
+                        LineView(data: self.countryDetailVM.filteredHistoricData).padding(.horizontal)
+                        Spacer()
                     }
-                    
                 }
                 Spacer()
             }

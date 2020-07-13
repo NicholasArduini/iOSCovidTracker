@@ -12,7 +12,7 @@ public class CountryDetailViewModel: ObservableObject {
     
     @Published var isLoading = false
     @Published var errorMessage = ""
-    @Published var statType = StatTypeFilter.active
+    @Published var statType = StatTypeFilter.confirmed
     @Published var filteredHistoricData = [Double]()
     
     private var countriesTotalStats = [CountryStat]()

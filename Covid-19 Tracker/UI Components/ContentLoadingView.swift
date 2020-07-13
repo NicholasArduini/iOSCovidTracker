@@ -27,7 +27,7 @@ struct ContentLoadingView<Content: View>: View {
         ZStack(alignment: .center) {
             content()
             ZStack {
-                Rectangle().frame(width: nil, height: nil, alignment: .center).edgesIgnoringSafeArea(.all).foregroundColor(.secondarySystemBackground)
+                Rectangle().frame(width: nil, height: nil, alignment: .center).edgesIgnoringSafeArea(.all).foregroundColor(.systemBackground)
                 if (isLoading) {
                     ActivityIndicator()
                         .frame(width: 50, height: 50)
