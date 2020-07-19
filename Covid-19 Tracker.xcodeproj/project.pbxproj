@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D13469924C4F60100DFB5BE /* StatTypeFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D13469824C4F60100DFB5BE /* StatTypeFilter.swift */; };
 		5D3BE5912496AEBB008E70A6 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3BE5902496AEBB008E70A6 /* Color+Extension.swift */; };
 		5D3BE5962499AF4B008E70A6 /* ContentLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3BE5952499AF4B008E70A6 /* ContentLoadingView.swift */; };
 		5D3BE5992499B26A008E70A6 /* CountryListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3BE5982499B26A008E70A6 /* CountryListItem.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D13469824C4F60100DFB5BE /* StatTypeFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatTypeFilter.swift; sourceTree = "<group>"; };
 		5D3BE5902496AEBB008E70A6 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		5D3BE5952499AF4B008E70A6 /* ContentLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentLoadingView.swift; sourceTree = "<group>"; };
 		5D3BE5982499B26A008E70A6 /* CountryListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListItem.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			children = (
 				5DCB3F2824969C1F00FBD69A /* Country.swift */,
 				5DCB3F2A24969D7900FBD69A /* CountriesSummary.swift */,
+				5D13469824C4F60100DFB5BE /* StatTypeFilter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				5D3BE5962499AF4B008E70A6 /* ContentLoadingView.swift in Sources */,
 				5DCB3F2024969AC200FBD69A /* NetworkManager.swift in Sources */,
 				5DCB3F2B24969D7900FBD69A /* CountriesSummary.swift in Sources */,
+				5D13469924C4F60100DFB5BE /* StatTypeFilter.swift in Sources */,
 				5D3BE59B2499B2A9008E70A6 /* String+Extension.swift in Sources */,
 				5DCB3F2924969C1F00FBD69A /* Country.swift in Sources */,
 				5DBB269724BB95B50063CDBB /* Binding+Extension.swift in Sources */,

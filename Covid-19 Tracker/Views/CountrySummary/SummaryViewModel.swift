@@ -8,13 +8,6 @@
 
 import Foundation
 
-enum StatTypeFilter {
-    case confirmed
-    case active
-    case recovered
-    case deaths
-}
-
 public class SummaryViewModel: ObservableObject {
     
     @Published var countriesSummary = CountriesSummary()
