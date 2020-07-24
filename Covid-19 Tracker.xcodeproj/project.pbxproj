@@ -54,7 +54,7 @@
 		5DCB3F02249697A900FBD69A /* Covid-19 Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid-19 Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DCB3F05249697A900FBD69A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DCB3F07249697A900FBD69A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5DCB3F09249697A900FBD69A /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SummaryView.swift; path = ../../SummaryView.swift; sourceTree = "<group>"; };
+		5DCB3F09249697A900FBD69A /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		5DCB3F0B249697AC00FBD69A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DCB3F0E249697AC00FBD69A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5DCB3F11249697AC00FBD69A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -150,7 +150,6 @@
 				5DCB3F2424969B5D00FBD69A /* Services */,
 				5DCB3F1E24969AA500FBD69A /* Managers */,
 				5D3BE58F2496AEA9008E70A6 /* Extensions */,
-				5DCB3F1D2496996500FBD69A /* Supporting */,
 				5DCB3F10249697AC00FBD69A /* LaunchScreen.storyboard */,
 				5DCB3F05249697A900FBD69A /* AppDelegate.swift */,
 				5DCB3F07249697A900FBD69A /* SceneDelegate.swift */,
@@ -181,17 +180,10 @@
 		5DCB3F1A2496984800FBD69A /* CountrySummary */ = {
 			isa = PBXGroup;
 			children = (
-				5DCB3F09249697A900FBD69A /* SummaryView.swift */,
 				5DCB3F1B249698CC00FBD69A /* SummaryViewModel.swift */,
+				5DCB3F09249697A900FBD69A /* SummaryView.swift */,
 			);
 			path = CountrySummary;
-			sourceTree = "<group>";
-		};
-		5DCB3F1D2496996500FBD69A /* Supporting */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Supporting;
 			sourceTree = "<group>";
 		};
 		5DCB3F1E24969AA500FBD69A /* Managers */ = {
